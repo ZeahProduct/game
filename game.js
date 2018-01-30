@@ -44,14 +44,14 @@ function start() {
 			var id = property.id;
 			document.getElementById("item").className = name;
 	    }
-	}.done(function() {
+	}).done(function() {
 		$.ajax({
 		    url: "https://cors-anywhere.herokuapp.com/http://services.runescape.com/m=itemdb_oldschool/viewitem?obj=" + id,
 		    success: function (data2) {
 			document.getElementById("item").src = $(data2).find(".item-description").find("img")[0].src;
 		    }
 		});
-	}));
+	});
 }
 
 $("#mainForm").submit(function(e) {
