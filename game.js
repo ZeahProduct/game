@@ -53,4 +53,8 @@ function start() {
 	});
 }
 
+$("#mainForm").submit(function(e) {
+    e.preventDefault();
+});
+
 $(document).ready(start);
