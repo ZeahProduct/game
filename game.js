@@ -37,14 +37,12 @@ function start() {
 		save();
 	}
 	$.ajax({
-	    url: "https://cors-anywhere.herokuapp.com/http://rsbuddy.com/exchange/summary.json",
-	    success: function (data) {
-			var property = randomProperty(data);
-			var name = property.name;
-			var id = property.id;
-			document.getElementById("item").className = name;
-	    }
-	}).done(function() {
+	    url: "https://cors-anywhere.herokuapp.com/http://rsbuddy.com/exchange/summary.json"
+	}).done(function(data) {
+		var property = randomProperty(data);
+		var name = property.name;
+		var id = property.id;
+		document.getElementById("item").className = name;
 		$.ajax({
 		    url: "https://cors-anywhere.herokuapp.com/http://services.runescape.com/m=itemdb_oldschool/viewitem?obj=" + id,
 		    success: function (data2) {
