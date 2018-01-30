@@ -1,0 +1,95 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<title>Name Game</title>
+		<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" src="game.js"></script>
+		<style type="text/css">
+			body {
+				margin:auto;
+				width:50%;
+				padding:10px;
+    			text-align: center;
+    			font-family: Arial, Helvetica, sans-serif;
+				font-size: inherit;
+				text-shadow: 1px 1px 2px gray;
+				letter-spacing: 1px;
+				font-weight: 700;
+				background: url("https://www.123freevectors.com/wp-content/uploads/great/white-seamless-background-free-vector-145.jpg");
+			}
+
+			#item {
+				background:white;
+				border:2px solid gray;
+				border-radius: 7px;
+			}
+
+			#itemName {
+				border-radius: 7px;
+				border:2px solid gray;
+			}
+
+			.btn {
+				width:240px;
+				border: none;
+				color: inherit;
+				background: none;
+				cursor: pointer;
+				padding: 25px 80px;
+				display: inline-block;
+				margin: 15px 30px;
+				outline: none;
+				position: relative;
+				background: #17aa56;
+				color: #fff;
+				box-shadow: 0 5px #119e4d;
+				-webkit-transition: none;
+				-moz-transition: none;
+				transition: none;
+				font-family: inherit;
+				font-size: inherit;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+				font-weight: 700;
+			}
+
+			.btn:after {
+				content: '';
+				position: absolute;
+				z-index: -1;
+				-webkit-transition: all 0.3s;
+				-moz-transition: all 0.3s;
+				transition: all 0.3s;
+			}
+
+			.btn-2c {
+				border-radius: 5px;
+			}
+
+			.btn-2c:hover {
+				box-shadow: 0 4px #119e4d;
+				top: 2px;
+			}
+
+			.btn-2c:active {
+				box-shadow: 0 0 #119e4d;
+				top: 6px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<h2 id="points">Points: 0</h2>
+		<img id="item" src="" class="0" draggable="false"></img><br>
+		<form onsubmit="start()">
+		<br>
+			What is this item?<br><br>
+			<input type="text" id="itemName" value=""><br><br>
+			<input type="submit" value="Submit" class='btn-2c btn' id='submit'>
+		</form>
+	</body>
+
+	<footer>
+
+	</footer>
+</html>
