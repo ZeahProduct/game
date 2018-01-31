@@ -26,8 +26,7 @@ var randomProperty = function(obj) {
 	return obj[keys[keys.length * Math.random() << 0]];
 };
 
-function start(e) {
-	e.preventDefault();
+function start() {
 	load();
 	var inputText = document.getElementById("itemName").value.toLowerCase();
 	var correctText = document.getElementById("item").className.replace(/%20/g, " ").toLowerCase();
@@ -55,8 +54,5 @@ function start(e) {
 
 $("#mainForm").submit(function(e) {
     e.preventDefault();
-});
-
-$(document).ready(function(e) {
-	start(e);
+    start();
 });
