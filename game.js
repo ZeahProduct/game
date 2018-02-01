@@ -30,6 +30,7 @@ function start() {
 	load();
 	var inputText = document.getElementById("itemName").value.toLowerCase();
 	var correctText = document.getElementById("item").className.replace(/%20/g, " ").toLowerCase();
+	document.getElementById("itemName").value = "";
 	if (inputText == correctText) {
 		console.log(correctText);
 		points += 1;
