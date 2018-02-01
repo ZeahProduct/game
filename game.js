@@ -52,7 +52,9 @@ function start() {
 	});
 }
 
-document.getElementById('mainForm').onsubmit = function(e) {
-    e.preventDefault();
-    start();
-};
+document.body.onload = function() {
+	document.getElementById('mainForm').onsubmit = function(e) {
+	    e.preventDefault();
+	    start();
+	};
+}
