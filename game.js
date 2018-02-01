@@ -53,6 +53,7 @@ function start() {
 }
 
 window.onload = function() {
+	start();
 	document.getElementById('mainForm').onsubmit = function(e) {
 	    e.preventDefault();
 	    start();
