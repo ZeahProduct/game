@@ -8,25 +8,32 @@
 			body {
 				margin:auto;
 				width:50%;
-				padding:10px;
-    			text-align: center;
-    			font-family: Arial, Helvetica, sans-serif;
+				padding:40px;
+				text-align: center;
+				font-family: Arial, Helvetica, sans-serif;
 				font-size: inherit;
-				text-shadow: 1px 1px 2px gray;
 				letter-spacing: 1px;
 				font-weight: 700;
-				background: url("https://www.123freevectors.com/wp-content/uploads/great/white-seamless-background-free-vector-145.jpg");
+				background-color: #e8e8e8;
 			}
 
 			#item {
 				background:white;
-				border:2px solid gray;
-				border-radius: 7px;
+				border: 1px solid #e7e7e7;
+				border-radius: 4px;
+				box-shadow: 0 7px 30px -10px rgba(150,170,180,.5);
+				width:98px;
+				height:98px;
+				display:inline-block;
 			}
 
-			#itemName {
-				border-radius: 7px;
-				border:2px solid gray;
+			#itemName {    
+				border-radius: 2px;
+				border: 1px solid #e7e7e7;
+				width: 240px;
+				height: 26px;
+				color: #5c5c5c;
+				box-shadow: 0 7px 30px -10px rgba(150,170,180,.5);
 			}
 
 			.btn {
@@ -75,15 +82,20 @@
 				box-shadow: 0 0 #119e4d;
 				top: 6px;
 			}
+			
+			.coins {
+				width:24px;
+			}
 		</style>
 	</head>
 
 	<body>
-		<h2 id="points">Points: 0</h2>
-		<img id="item" src="" class="0" draggable="false"></img><br>
-		<form id="mainForm" onsubmit="return false">
+		<h2 id="points"><img src="https://oldschool.runescape.wiki/images/6/63/Coins_detail.png?404bc" class="coins"> 0</h2>
+		<img id="item" src="loading.gif" class="0" draggable="false"></img>
 		<br>
-			What is this item?<br><br>
+		<form id="mainForm" onsubmit="return false">
+			<br>
+			<span id="resultText">What is this item?</span><br><br>
 			<input type="text" id="itemName" value=""><br><br>
 			<input type="submit" value="Submit" class='btn-2c btn' id='submit'>
 		</form>
